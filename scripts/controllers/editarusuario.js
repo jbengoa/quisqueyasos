@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('EditarusuarioCtrl', function ($scope, $q, TareasResourse, $log, $cookieStore, $location, $http) {
+  .controller('EditarusuarioCtrl', function ($scope, $q,md5, TareasResourse, $log, $cookieStore, $location, $http) {
     var init = function () {
       var usuario = $cookieStore.get('user');
       $scope.url ='http://45.55.242.157:8080/api/verUser/'+usuario.idusuario;
@@ -54,7 +54,7 @@ var conn = $q.defer();
         nombres: $scope.clienteNombre,
         apellidos: $scope.clienteApellido,
         username: $scope.clienteUsername,
-        password: $scope.clientePassoword,
+        password: md5.createHash($scope.clientePassoword),
         telefono: $scope.clienteTelfono,
         direccion: $scope.clienteDireccion,
         cedula: $scope.clienteCedula,

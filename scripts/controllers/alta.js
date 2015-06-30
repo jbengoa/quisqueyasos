@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('AltaCtrl', function ($scope,$q, $filter, $http, $cookieStore, $location, TareasResourse) {
+  .controller('AltaCtrl', function ($scope,$q,md5, $filter, $http, $cookieStore, $location, TareasResourse) {
 
     $scope.clienteUsername = '';
     $scope.clientePassoword = '';
@@ -43,7 +43,7 @@ angular.module('appApp')
         nombres: $scope.clienteNombre,
         apellidos: $scope.clienteApellido,
         username: $scope.clienteUsername,
-        password: $scope.clientePassoword,
+        password: md5.createHash($scope.clientePassoword),
         telefono: $scope.clienteTelfono,
         direccion: $scope.clienteDireccion,
         cedula: $scope.clienteCedula,

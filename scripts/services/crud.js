@@ -13,7 +13,7 @@ angular.module('appApp')
 .factory('TareasResourse', function ($resource) {
   var factory = {
 
-   iniciar: $resource('http://45.55.77.156:8080/login',{},{
+   iniciar: $resource('_server'+'/login',{},{
       sesion: {method: 'POST', params:{
         username:'@username',
         password:'@password'}

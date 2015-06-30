@@ -8,7 +8,7 @@
  * Controller of the appApp
  */
 angular.module('appApp')
-  .controller('Alta2Ctrl', function ($scope,$q, $filter, $http, $cookieStore, $location, TareasResourse) {
+  .controller('Alta2Ctrl', function ($scope,$q,md5, $filter, $http, $cookieStore, $location, TareasResourse) {
    $scope.tipos =  [{id:0, nombre:'Administrador'},{id:1, nombre:'Cliente'}];
     $scope.selectedEstado = $scope.tipos[1]; 
      
@@ -47,7 +47,7 @@ angular.module('appApp')
         nombres: $scope.clienteNombre,
         apellidos: $scope.clienteApellido,
         username: $scope.clienteUsername,
-        password: $scope.clientePassoword,
+        password: md5.createHash($scope.clientePassoword),
         telefono: $scope.clienteTelfono,
         direccion: $scope.clienteDireccion,
         cedula: $scope.clienteCedula,
