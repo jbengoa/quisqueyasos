@@ -1,4 +1,4 @@
-@import url(http://fonts.googleapis.com/css?family=Raleway);
+@import url('http://fonts.googleapis.com/css?family=Open+Sans');
 
 .angular-google-map-container { height: 400px; }
 
@@ -17,6 +17,7 @@
 form {
   display: block;
   margin-top: 20px;
+  font-family:"Open Sans";
 }
 
 .map-canvas {
