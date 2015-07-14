@@ -33,7 +33,7 @@ angular.module('appApp')
           setTareas();
         });
       }else{
-        console.log(data);
+        // console.log(data);
         var usr = TareasResourse.Estado.editar({
           idestado:id,
           nombre:data.nombre,

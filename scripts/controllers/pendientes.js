@@ -22,7 +22,7 @@ angular.module('appApp')
 
 
     $scope.pageChangeHandler = function(num) {
-      console.log('meals page changed to ' + num);
+      //console.log('meals page changed to ' + num);
     };
 
 
@@ -41,7 +41,7 @@ angular.module('appApp')
       $scope.guardado = false;
 
       $scope.alt = alerta;
-      console.log( $scope.alt);
+      //console.log( $scope.alt);
       $scope.alertaComentario = alerta.comentario;
       $scope.alertaEstado = alerta.tipos;
       $scope.alertaIdUsuario = alerta.idalerta;
@@ -68,11 +68,11 @@ angular.module('appApp')
       }
     };
       $scope.guardarCambios = function() {
-
+        /*
       console.log( $scope.alt.idalerta);
       console.log( $scope.alt.comentario);
       console.log( $scope.selectedEstado.idestado);
-
+*/
       var ed =   TareasResourse.membresia.add({
         username: $scope.alt.username,
         tiempo: $scope.selectedEstado.dias,

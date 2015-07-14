@@ -12,7 +12,7 @@ angular.module('appApp')
 
 
     $scope.pageChangeHandler = function(num) {
-      console.log('going to page ' + num);
+      //console.log('going to page ' + num);
     };
 
     }

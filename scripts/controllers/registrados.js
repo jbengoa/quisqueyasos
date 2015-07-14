@@ -21,7 +21,7 @@ angular.module('appApp')
 
 
     $scope.pageChangeHandler = function(num) {
-      console.log('meals page changed to ' + num);
+      //console.log('meals page changed to ' + num);
     };
 
 
@@ -38,7 +38,7 @@ $scope.aceptarUsuario = function(alerta) {
   $scope.guardado = false;
 
   $scope.alt = alerta;
-  console.log( $scope.alt);
+  //console.log( $scope.alt);
   $scope.alertaComentario = alerta.comentario;
   $scope.alertaEstado = alerta.tipos;
   $scope.alertaIdUsuario = alerta.idalerta;
@@ -66,9 +66,9 @@ $scope.aceptarUsuario = function(alerta) {
     };
     $scope.guardarCambios = function() {
 
-      console.log( $scope.alt.idalerta);
-      console.log( $scope.alt.comentario);
-      console.log( $scope.selectedEstado.idestado);
+      //console.log( $scope.alt.idalerta);
+      //console.log( $scope.alt.comentario);
+      //console.log( $scope.selectedEstado.idestado);
 
       var ed =   TareasResourse.membresia.add({
         username: $scope.alt.username,

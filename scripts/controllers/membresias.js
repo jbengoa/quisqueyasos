@@ -27,7 +27,7 @@ angular.module('appApp')
           $scope.tareas = TareasResourse.getMembresias.all();
         });
       }else{
-        console.log(data);
+        //console.log(data);
         var usr =  TareasResourse.editMembresia.editar({
           idmebresia:id,
           nombre:data.nombre,

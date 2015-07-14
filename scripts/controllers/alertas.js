@@ -21,7 +21,7 @@ angular.module('appApp')
     $scope.pageSize = 5;
 
     $scope.pageChangeHandler = function(num) {
-      console.log('page changed to ' + num);
+      // console.log('page changed to ' + num);
     };
 
 
@@ -109,7 +109,7 @@ angular.module('appApp')
       $scope.guardado = false;
 
       $scope.alt = alerta;
-      console.log( $scope.alt);
+      // console.log( $scope.alt);
       $scope.alertaComentario = alerta.comentario;
       $scope.alertaEstado = alerta.tipos;
       $scope.alertaIdUsuario = alerta.idalerta;

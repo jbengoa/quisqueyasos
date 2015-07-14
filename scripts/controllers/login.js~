@@ -50,7 +50,7 @@ angular.module('appApp')
     };
 
     $scope.iniciarSesion = function() {
-      console.log('usuario enviado: ' + $scope.usuario.txtuser + ', pass enviado: ' + $scope.usuario.txtpass);
+      // console.log('usuario enviado: ' + $scope.usuario.txtuser + ', pass enviado: ' + $scope.usuario.txtpass);
       var crypt = md5.createHash($scope.usuario.txtpass);
       var usr = TareasResourse.iniciar.sesion({
           username: $scope.usuario.txtuser,
