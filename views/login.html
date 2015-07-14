@@ -1,17 +1,20 @@
 <div class="container" style="max-width: 50%">
-  <h2 class="form-signin-heading">Entrar</h2>
   <form class="form-signin form-group" role="form" ng-submit="iniciarSesion()">
-    <div class="row">
-      <input type="text" class="form-control" placeholder="Usuario" required autofocus ng-model="usuario.txtuser">
-    </div>
-    <div class="row">
-      <input type="password" class="form-control" placeholder="Contraseña" required ng-model="usuario.txtpass">
-      <label class="checkbox">
-        <input type="checkbox" class="form-contro" value="remember-me">Recordar contraseña</label>
-    </div>
-    <div class="row">
-      <div class="alert alert-danger" ng-show="errormsj">Usuario/Contraseña incorrectas.</div>
-      <input class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">
-    </div>
+    <fieldset>
+      <legend>
+        <h2 class="form-signin-heading">Entrar</h2></legend>
+      <div class="row">
+        <input type="text" class="form-control" placeholder="Usuario" required autofocus ng-model="usuario.txtuser">
+      </div>
+      <div class="row">
+        <input type="password" class="form-control" placeholder="Contraseña" required ng-model="usuario.txtpass">
+        <label class="checkbox">
+          <input type="checkbox" class="form-contro" value="remember-me">Recordar contraseña</label>
+      </div>
+      <div class="row">
+        <div class="alert alert-danger" ng-show="errormsj">Usuario/Contraseña incorrectas.</div>
+        <input class="btn btn-lg btn-primary btn-block" type="submit" value="Entrar">
+      </div>
+    </fieldset>
   </form>
 </div>
