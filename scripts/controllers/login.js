@@ -12,7 +12,6 @@ angular.module('appApp')
     delete $window.sessionStorage.token;
     var inicioSesion = $q.defer();
     $scope.errormsj = false;
-
     inicioSesion.promise.then(usrASesion);
     //le propagamos estos valores al controlador padre para poder ocultar elmentos del menu ya que el menu tiene otro controlador
     function usrASesion(usr) {
@@ -44,6 +43,7 @@ angular.module('appApp')
       }
       else {
         $scope.errormsj = true;
+        console.log("Entre aqui");
       }
 
 

@@ -30,18 +30,22 @@ angular
     editableOptions.theme = 'bs3';
 
     $rootScope.$on('$routeChangeStart', function(event, next, current) {
-      //Si esta desconectado y intenta entrar a menu lo enviamos a login
+      //Si esta desconectado e intenta entrar al menu lo enviamos a login
       if($cookieStore.get('estaConectado')== false || $cookieStore.get('estaConectado') == null) {
+        /*
         if(next.templateUrl == 'views/alertas.html' || next.templateUrl == 'views/pendientes.html'||next.templateUrl == 'views/registrados.html'
           ||next.templateUrl == 'views/alta2.html'||next.templateUrl == 'views/declinados.html'
           ||next.templateUrl == 'views/editarusuario.html'||next.templateUrl == 'views/addVehiculo.html'
           ||next.templateUrl == 'views/vehiculos.html'){
           $location.path('/login');
         }
+        */
+        if(!next.templateUrl == 'views/login')
+          $location.path('/login');
       }
       else{
         var usuario = $cookieStore.get('user');
-        //SI esta conectado y intenta entrar al login lo enviamos a menu
+        //Si esta conectado e intenta entrar al login lo enviamos a menu
         if(next.templateUrl == 'views/login.html'){
           $location.path('/menu'); 
         }
