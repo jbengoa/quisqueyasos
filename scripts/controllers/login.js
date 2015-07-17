@@ -11,10 +11,14 @@ angular.module('appApp')
   .controller('LoginCtrl', function($scope, $q, md5, TareasResourse, $log, $cookieStore, $window, $location) {
     delete $window.sessionStorage.token;
     var inicioSesion = $q.defer();
+
     $scope.errormsj = false;
+
     inicioSesion.promise.then(usrASesion);
+    //console.log(inicioSesion.promise.then(usrASesion));
     //le propagamos estos valores al controlador padre para poder ocultar elmentos del menu ya que el menu tiene otro controlador
     function usrASesion(usr) {
+      console.log(usr.nombre);
       if (usr.nombre != 'wrong') {
         $scope.usrConectado.nombre = usr.nombres;
         $scope.usrConectado.user = usr.username;
@@ -43,7 +47,6 @@ angular.module('appApp')
       }
       else {
         $scope.errormsj = true;
-        //// console.log("Entre aqui");
       }
 
 

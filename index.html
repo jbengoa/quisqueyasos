@@ -25,22 +25,16 @@
 
   <!-- Add your site or application content here -->
   <div ng-controller="NavCtrl" class="container">
-    <div class="header">
+    <!--<div class="header">-->
       <div class="navbar navbar-default navbar-fixed-top" role="navigation">
         <div class="container">
-          <div class="navbar-header ">
+          <div class="navbar-header">
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#js-navbar-collapse">
             </button>
-            <img src="0.png" alt="QuisqueyaSOS" style="width:100px;height:80px">
+            <a class="navbar-brand" href="#/login"><img src="0.png" alt="QuisqueyaSOS" style="width:100px;height:80px"></a>
           </div>
-          <div class="collapse navbar-collapse" id="js-navbar-collapse">
-            <ul style="list-style-type: none">
-              <li></li>
-            </ul>
+          <div class="navbar-collapse collapse" id="js-navbar-collapse">
             <div class="container">
-              <ul style="list-style-type: none">
-                <li></li>
-              </ul>
               <ul class="nav nav-pills pull-right">
                 <li ng-show="usrConectado.cliente" class="dropdown">
                   <a href="#vehiculos" class="dropdown-toggle">Vehiculos <b class="caret"></b></a>
@@ -50,7 +44,7 @@
                   </ul>
                 </li>
                 <li>
-                  <a ng-href="#/login" ng-show="!usrConectado.estaConectado">Entrar</a>
+                  <a ng-href="#/login" ng-show="!usrConectado.estaConectado"><i class="fa fa-user"></i> Entrar</a>
                 </li>
                 <li>
                   <a ng-href="#/alta" ng-show="!usrConectado.estaConectado">Registrarse</a>
@@ -84,16 +78,15 @@
           </div>
         </div>
       </div>
-    </div>
+    <!--</div>-->
     <div class="container">
-      <div ng-view="">
+      <div ng-view="" class="ng-view-container">
 
       </div>
     </div>
     <div class="footer">
-      <div class="container">
-
-        <p><span class="glyphicon glyphicon-envelope"></span> </p>
+      <div class="container text-center">
+        <strong>Copyright &copy; 2015 - QuisqueyaSOS</strong>
       </div>
     </div>
   </div>
