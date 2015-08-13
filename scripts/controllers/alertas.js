@@ -161,6 +161,7 @@ angular.module('appApp')
       $scope.marker.coords.longitude = alerta.longitud;
       $scope.map.center.latitude  = alerta.latitud;
       $scope.map.center.longitude  = alerta.longitud;
+      $scope.map.message = "username";
       $scope.map.zoom = 16;
     };
 
