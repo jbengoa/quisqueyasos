@@ -8,8 +8,7 @@
  *
  * Main module of the application.
  */
-angular
-  .module('appApp', [
+angular.module('appApp', [
     'ngAnimate',
     'ngCookies',
     'ngResource',
@@ -23,9 +22,6 @@ angular
     'angularUtils.directives.dirPagination'
 
   ])
-
-
-
   .run(function(editableOptions, $rootScope, $location, $cookieStore,$filter){
     editableOptions.theme = 'bs3';
 
@@ -52,7 +48,6 @@ angular
       }
     });
   })
-
   .config(
   function ($routeProvider) {
     $routeProvider
@@ -137,7 +132,6 @@ angular
     }
   };
 })
-
 .config(function ($httpProvider) {
   $httpProvider.interceptors.push('authInterceptor');
 });

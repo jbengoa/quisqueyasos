@@ -104,12 +104,14 @@ angular.module('appApp')
     $scope.editarAlerta = function(alerta) {
      var seleccion= [];
      seleccion = $filter('filter')($scope.estados, {idestado: alerta.estado});
+      console.log(alerta);
       $scope.selectedEstado = seleccion[0];
 
       $scope.guardado = false;
 
       $scope.alt = alerta;
       // console.log( $scope.alt);
+      
       $scope.alertaComentario = alerta.comentario;
       $scope.alertaEstado = alerta.tipos;
       $scope.alertaIdUsuario = alerta.idalerta;
