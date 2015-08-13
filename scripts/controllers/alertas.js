@@ -156,13 +156,14 @@ angular.module('appApp')
       }};
 
     $scope.actualizar = function(alerta){
+      console.log(alerta);
       $scope.showMap = true;
       $scope.marker.coords.latitude = alerta.latitud;
       $scope.marker.coords.longitude = alerta.longitud;
       $scope.map.center.latitude  = alerta.latitud;
       $scope.map.center.longitude  = alerta.longitud;
-      $scope.map.message = "username";
-      $scope.map.zoom = 16;
+      $scope.map.message = alerta.username;
+      $scope.map.zoom = 18;
     };
 
 
